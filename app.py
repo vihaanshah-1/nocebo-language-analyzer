@@ -59,30 +59,32 @@ DEFAULT_EXAMPLE = (
     "If you feel unwell, seek urgent medical help."
 )
 
+# Create a persistent state value for the text box
+if "input_text" not in st.session_state:
+    st.session_state["input_text"] = ""
+
 colA, colB = st.columns([3, 1])
 
 with colA:
-    text = st.text_area(
+    st.text_area(
         "Input text",
         height=220,
         placeholder="Paste text here…",
-        value="",
+        key="input_text",  # <-- this binds the widget to session_state["input_text"]
     )
 
 with colB:
     st.markdown("### Quick actions")
     if st.button("Use example text"):
-        st.session_state["__example__"] = True
-    if st.button("Clear"):
-        st.session_state["__clear__"] = True
+        st.session_state["input_text"] = DEFAULT_EXAMPLE
+        st.rerun()
 
-# Apply quick actions safely
-if st.session_state.get("__example__", False):
-    text = DEFAULT_EXAMPLE
-    st.session_state["__example__"] = False
-if st.session_state.get("__clear__", False):
-    text = ""
-    st.session_state["__clear__"] = False
+    if st.button("Clear"):
+        st.session_state["input_text"] = ""
+        st.rerun()
+
+# Use the state-backed value everywhere else
+text = st.session_state["input_text"]
 
 analyze = st.button("Analyze", type="primary")
 
