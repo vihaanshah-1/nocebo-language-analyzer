@@ -3,64 +3,220 @@ import streamlit as st
 
 from nocebo_analyzer import predict_nocebo_risk, suggest_rewrite
 
-st.set_page_config(page_title="Nocebo Language Analyzer", layout="wide")
-
-st.title("Nocebo / Placebo Language Analyzer")
-st.caption("Educational tool for health-communication analysis. Not medical advice.")
-
-st.write(
-    "Paste patient-facing medical text (e.g., consent language or procedure instructions). "
-    "The tool scores sentences for potential nocebo/anxiety-inducing language and suggests neutral alternatives."
+# ----------------------------
+# Page setup
+# ----------------------------
+st.set_page_config(
+    page_title="Nocebo Language Analyzer",
+    page_icon="🩺",
+    layout="wide",
 )
 
-text = st.text_area("Input text", height=220, placeholder="Paste text here...")
+# ----------------------------
+# Sidebar: purpose + controls
+# ----------------------------
+st.sidebar.title("Nocebo Language Analyzer")
+st.sidebar.caption("Educational prototype • Not medical advice")
 
-col1, col2 = st.columns([1, 2])
-with col1:
-    run = st.button("Analyze", type="primary")
-with col2:
-    st.markdown(
-        "**Ethics note:** Educational prototype only. Do not use this tool for clinical decisions "
-        "or to rewrite clinical documents without professional review."
+with st.sidebar.expander("Intended use (read this)", expanded=True):
+    st.write(
+        "This tool flags potentially anxiety-inducing (nocebo-risk) language in "
+        "patient-facing medical text and suggests more neutral alternatives.\n\n"
+        "**Appropriate uses:** education, research prototyping, communication review.\n\n"
+        "**Not appropriate for:** clinical decision-making, final approval of consent language, "
+        "or use with patient-identifying information."
     )
 
-if run:
+st.sidebar.divider()
+
+show_only_high_risk = st.sidebar.checkbox("Show only risk ≥ 2", value=False)
+auto_rewrites = st.sidebar.checkbox("Generate rewrite suggestions", value=True)
+sort_by = st.sidebar.selectbox(
+    "Sort results by",
+    options=["Risk label (desc)", "Risk label (asc)", "Original order"],
+    index=0,
+)
+
+st.sidebar.divider()
+st.sidebar.caption("Tip: Avoid pasting any private/patient info.")
+
+# ----------------------------
+# Header
+# ----------------------------
+st.title("Nocebo / Placebo Language Analyzer")
+st.write(
+    "Paste patient-facing medical text (e.g., consent instructions, procedure guidance). "
+    "The app splits it into sentences, assigns a **risk label (0–3)**, tags trigger categories, "
+    "and optionally suggests neutral rewrites."
+)
+
+# ----------------------------
+# Input area
+# ----------------------------
+DEFAULT_EXAMPLE = (
+    "After sedation, you must not drive for 24 hours. "
+    "Rare complications include stroke. "
+    "If you feel unwell, seek urgent medical help."
+)
+
+colA, colB = st.columns([3, 1])
+
+with colA:
+    text = st.text_area(
+        "Input text",
+        height=220,
+        placeholder="Paste text here…",
+        value="",
+    )
+
+with colB:
+    st.markdown("### Quick actions")
+    if st.button("Use example text"):
+        st.session_state["__example__"] = True
+    if st.button("Clear"):
+        st.session_state["__clear__"] = True
+
+# Apply quick actions safely
+if st.session_state.get("__example__", False):
+    text = DEFAULT_EXAMPLE
+    st.session_state["__example__"] = False
+if st.session_state.get("__clear__", False):
+    text = ""
+    st.session_state["__clear__"] = False
+
+analyze = st.button("Analyze", type="primary")
+
+# ----------------------------
+# Analysis (cached for speed)
+# ----------------------------
+@st.cache_data(show_spinner=False)
+def analyze_text_cached(input_text: str):
+    # predict_nocebo_risk returns a list of dicts per sentence
+    return predict_nocebo_risk(input_text)
+
+def risk_label_to_band(label: int) -> str:
+    if label >= 3:
+        return "High"
+    if label == 2:
+        return "Moderate"
+    if label == 1:
+        return "Mild"
+    return "Neutral"
+
+# ----------------------------
+# Run
+# ----------------------------
+if analyze:
     if not text.strip():
         st.warning("Please paste some text first.")
+        st.stop()
+
+    with st.spinner("Analyzing…"):
+        results = analyze_text_cached(text)
+
+    if not results:
+        st.info("No sentences detected. Try adding punctuation (., !, ?).")
+        st.stop()
+
+    # Build rows
+    rows = []
+    for idx, r in enumerate(results):
+        sent = r.get("sentence", "").strip()
+        label = int(r.get("label", 0))
+        cats = r.get("categories", []) or []
+        rewrite = suggest_rewrite(sent) if auto_rewrites else ""
+
+        rows.append(
+            {
+                "Order": idx,
+                "Sentence": sent,
+                "Risk label": label,
+                "Band": risk_label_to_band(label),
+                "Categories": ", ".join(cats),
+                "Suggested neutral rewrite": rewrite,
+            }
+        )
+
+    df = pd.DataFrame(rows)
+
+    # Filters
+    if show_only_high_risk:
+        df = df[df["Risk label"] >= 2].copy()
+
+    # Sorting
+    if sort_by == "Risk label (desc)":
+        df = df.sort_values(["Risk label", "Order"], ascending=[False, True])
+    elif sort_by == "Risk label (asc)":
+        df = df.sort_values(["Risk label", "Order"], ascending=[True, True])
     else:
-        results = predict_nocebo_risk(text)
+        df = df.sort_values(["Order"], ascending=True)
 
-        if not results:
-            st.info("No sentences detected. Try adding punctuation (., !, ?).")
-        else:
-            rows = []
-            for r in results:
-                sent = r.get("sentence", "")
-                label = r.get("label", None)
-                cats = r.get("categories", [])
-                suggestion = suggest_rewrite(sent)
+    # ----------------------------
+    # Summary panel
+    # ----------------------------
+    st.subheader("Summary")
 
-                rows.append({
-                    "Sentence": sent,
-                    "Risk label (0–3)": label,
-                    "Categories": ", ".join(cats) if cats else "",
-                    "Suggested neutral rewrite": suggestion
-                })
+    # Counts by risk label (0-3)
+    counts = (
+        pd.DataFrame({"Risk label": [0, 1, 2, 3]})
+        .merge(df["Risk label"].value_counts().rename_axis("Risk label").reset_index(name="Count"),
+               on="Risk label",
+               how="left")
+        .fillna({"Count": 0})
+    )
+    counts["Count"] = counts["Count"].astype(int)
 
-            df = pd.DataFrame(rows).sort_values(by="Risk label (0–3)", ascending=False)
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Neutral (0)", int(counts.loc[counts["Risk label"] == 0, "Count"].iloc[0]))
+    c2.metric("Mild (1)", int(counts.loc[counts["Risk label"] == 1, "Count"].iloc[0]))
+    c3.metric("Moderate (2)", int(counts.loc[counts["Risk label"] == 2, "Count"].iloc[0]))
+    c4.metric("High (3)", int(counts.loc[counts["Risk label"] == 3, "Count"].iloc[0]))
 
-            st.subheader("Results")
-            st.dataframe(df, use_container_width=True)
+    # Chart
+    chart_df = counts.set_index("Risk label")[["Count"]]
+    st.bar_chart(chart_df)
 
-            st.subheader("Highest-risk sentences")
-            top = df[df["Risk label (0–3)"] >= 2]
-            if len(top) == 0:
-                st.write("None scored 2–3 in this sample.")
-            else:
-                for _, row in top.iterrows():
-                    st.markdown(f"**Sentence:** {row['Sentence']}")
-                    st.markdown(f"**Risk label:** {row['Risk label (0–3)']}")
-                    if row["Categories"]:
-                        st.markdown(f"**Categories:** {row['Categories']}")
-                    st.markdown(f"**Rewrite:** {row['Suggested neutral rewrite']}")
-                    st.divider()
+    # ----------------------------
+    # Results table
+    # ----------------------------
+    st.subheader("Results")
+    display_df = df.drop(columns=["Order"])
+    st.dataframe(display_df, use_container_width=True, hide_index=True)
+
+    # Download
+    csv_bytes = display_df.to_csv(index=False).encode("utf-8")
+    st.download_button(
+        "Download results (CSV)",
+        data=csv_bytes,
+        file_name="nocebo_language_results.csv",
+        mime="text/csv",
+    )
+
+    # ----------------------------
+    # High-risk callouts
+    # ----------------------------
+    st.subheader("High-risk callouts (risk ≥ 2)")
+    high = df[df["Risk label"] >= 2].copy().sort_values(["Risk label", "Order"], ascending=[False, True])
+
+    if high.empty:
+        st.write("No sentences scored 2–3 in this sample.")
+    else:
+        for _, row in high.iterrows():
+            st.markdown(f"**Sentence:** {row['Sentence']}")
+            st.markdown(f"**Risk label:** {row['Risk label']} ({row['Band']})")
+            if row["Categories"]:
+                st.markdown(f"**Categories:** {row['Categories']}")
+            if auto_rewrites and row["Suggested neutral rewrite"]:
+                st.markdown(f"**Suggested rewrite:** {row['Suggested neutral rewrite']}")
+            st.divider()
+
+    # ----------------------------
+    # About / Methods (collapsed)
+    # ----------------------------
+    with st.expander("About & Method (for reviewers)"):
+        st.write(
+            "This prototype uses a baseline NLP classifier to label sentences for potential nocebo-risk patterns. "
+            "Categories are heuristic and meant to support communication review, not replace clinical judgment.\n\n"
+            "**Limitations:** small dataset, domain shift across institutions, and imperfect rewrite suggestions. "
+            "Always involve qualified professionals for clinical materials."
+        )
