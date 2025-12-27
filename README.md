@@ -6,6 +6,7 @@ more neutral alternatives.
 
 This work builds on research into the nocebo effect and explores how language
 choices can shape patient expectations in healthcare settings.
+Live demo: https://nocebo-language-analyzer-w4uiturkxgjkszcncshr7v.streamlit.app/
 
 ---
 
