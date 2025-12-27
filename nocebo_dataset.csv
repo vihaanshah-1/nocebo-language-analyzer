@@ -1,0 +1,288 @@
+
+sentence,label,categories
+Your symptoms may be caused by a problem in your large bowel.,0,
+The test will help your doctor to find any problems and then plan your treatment.,0,
+Preparation for the test.,0,
+"To allow clear views of your bowel, it will need to be empty.",0,
+"The bowel can be cleaned by using the laxative provided, which you need to mix and drink.",0,
+Within your information pack you will receive specific instructions on how to do this.,0,
+"If you have not received this, please call the unit for further advice.",1,directive_harshness
+It is advisable that you stay near a toilet once you start taking your bowel preparation.,0,
+You should expect frequent bowel movements and diarrhoea.,2,vivid_side_effects;directive_harshness
+Remember: The advice about restrictions to eating and drinking will vary depending on the type of bowel preparation provided.,0,
+It is very important that you follow the advice given whilst also bearing in mind that: You may have sips of water only up to 2 hours before your test.,0,
+"Then, you must not eat or drink anything until after your test when you have been advised that it is safe to do so by a member of staff.",1,directive_harshness
+"If you are worried about taking the medicine, please contact us straight away.",1,directive_harshness
+Iron Tablets or Stool Bulking Agents: Stop taking these seven days before your test.,1,directive_harshness
+Please contact your anticoagulant clinic and ask them to check your clotting levels within 1 week of your test.,1,directive_harshness
+The anticoagulant nurse will advise you if your dose needs changing.,0,
+Do not stop taking it unless you are specifically told to do so.,1,directive_harshness
+"Oral contraceptive pills: If you are taking an oral contraceptive pill, diarrhoea can make it less effective.",1,vivid_side_effects
+Continue taking the pill but use other precautions for the rest of that cycle.,0,
+"You may feel some discomfort, bloating or abdominal pain during your colonoscopy.",1,vivid_side_effects
+There are two choices of pain relief available.,1,vivid_side_effects
+Sedation and a pain relief drug can be given as an injection into a vein in your hand or arm.,1,vivid_side_effects
+The sedation will make you feel relaxed and less anxious but won’t make you go to sleep.,0,
+You will be awake and will still be able to communicate with us.,0,
+Sedation may make you forgetful.,0,
+Afterwards you may remember very little about the test.,0,
+You must have a responsible adult to take you home and look after you for at least 12 hours after having sedation.,1,directive_harshness
+After having sedation you will be drowsy and small amounts of medication will remain in your body for up to 24 hours.,0,
+"During this period, although you may feel wide awake, you will still be under the influence of the sedation.",0,
+"Your concentration and co-ordination may be impaired and you may feel light-headed, faint or become forgetful.",0,
+"Due to this you must NOT do the following for 24 hours: drive a vehicle, operate any machinery or electrical items, drink alcohol, sign any legally binding documents, return to work, take recreational drugs, carry children or climb heights, take sedative drugs or sleeping tablets, or be responsible for anyone else.",1,directive_harshness
+Moderate sedation involves the use of medications to reduce anxiety and pain as well as impair consciousness and memory.,1,vivid_side_effects
+"As opposed to general anesthesia, you will be able to breathe on your own, talk, and move.",0,
+"It may not be possible to achieve complete loss of consciousness, amnesia, or lack of sensation with this level of sedation.",1,uncertainty
+Medications that will be utilized include Midazolam to reduce anxiety and Fentanyl to reduce pain associated with the procedure.,1,vivid_side_effects
+Moderate sedation is administered by a nurse who is overseen by the physician performing the interventional procedure.,0,
+There is no anesthesiologist involved in administration of moderate sedation.,0,
+An IV catheter will be inserted by a staff member.,0,
+Fluids will be infused through the IV and medications for sedation will be given prior to and during your procedure.,0,
+You will be given supplementary oxygen by nasal cannula or facemask throughout your procedure.,0,
+Your vital signs and any adverse effects will be monitored throughout your procedure by a nurse and the physician.,0,
+"If your level of sedation is inadequate, your physician may choose to administer additional sedative medications.",0,
+"If your level of sedation is excessive, your physician may choose to administer medications to reverse the effects of sedation.",0,
+"Maneuvers such as jaw thrusting and placement of airway devices in your mouth, nose, or throat may be needed if breathing is not adequate.",1,vivid_side_effects
+"RISKS: The risks associated with sedation include but are not limited to allergic reaction, aspiration, nausea, vomiting, shortness of breath, respiratory depression, airway obstruction, anxiety, agitation, and confusion.",1,vivid_side_effects
+"Some adverse effects can persist for hours after sedation including dizziness, grogginess, confusion, forgetfulness, headache, nausea, vomiting, dry mouth, itching, urinary retention, and constipation.",1,vivid_side_effects
+"There may be other unpredictable risks of rare complications including anaphylaxis, respiratory arrest, cardiac arrest, heart attack, stroke, brain death, paralysis, or death.",2,threat_intensity;uncertainty
+"Serious complications may require additional procedures such as positive pressure ventilation, placement of airway devices or intubation, CPR, or administration of life support medications.",1,threat_intensity
+You have been given an injection of contrast into a vein to enhance your CT scan.,0,
+"Although it is described as a dye, contrast is actually colourless to the eye and is removed naturally from your body through your bladder.",0,
+You will be asked to stay in the department for 30 minutes afterwards and not to leave the hospital or drive for an hour following the procedure to make sure there are no after effects.,1,directive_harshness
+You should drink plenty of fluid after your examination to flush the dye out of your system.,1,directive_harshness
+"The dye contains iodine which can cause a mild allergic reaction during the injection such as itching, wheezing or nausea.",1,vivid_side_effects
+These reactions rarely occur and normally pass off very quickly within five to ten minutes of the injection.,1,uncertainty
+A member of staff will go through a checklist with you before the dye is given so that any conditions you have which might cause a potential reaction to the dye can be identified.,0,
+"However, even when no conditions are identified, it is still possible that some people may experience a reaction.",1,uncertainty
+"Any reaction to the dye is normally immediate, but occasionally a red, itchy rash can develop on the body some hours after the scan.",1,vivid_side_effects
+"This is very rare, but if it does happen, you should contact your GP or local emergency department.",2,uncertainty;directive_harshness
+"Other rare but possible delayed reactions include nausea, vomiting, diarrhoea or constipation, abdominal pain, pain in the injected arm, rash, dizziness and headache.",2,uncertainty;vivid_side_effects
+These signs and symptoms almost always disappear within a few hours and usually little or no treatment is required.,0,
+"In some circumstances, the dye has to be injected into the arm quite quickly at the start of the examination.",0,
+Sometimes the dye can leak into the tissue around the vein during the injection.,0,
+This is called extravasation.,1,vivid_side_effects
+"Extravasation happens very rarely, but if it does occur, the area of your arm around the injection site may feel sore and swollen.",2,uncertainty;vivid_side_effects
+"You will be advised to keep gently massaging the area, keep your arm raised up if possible, and apply a cold compress.",1,uncertainty
+The swelling should clear within 24 hours.,2,vivid_side_effects;directive_harshness
+"If problems persist or you have any concerns, you should contact your GP or nearest emergency department.",1,directive_harshness
+"In rare cases, further treatment of the site is needed.",0,
+"Symptoms to watch for are ongoing pain, swelling, discoloration or redness.",1,vivid_side_effects
+"The following lines come from additional sedation information: 
+Taking a sedative tablet such as diazepam can sometimes be useful to relax you if you are very anxious before a general anaesthetic, but it is usually not enough on its own to relax you during a procedure.",0,
+"It takes a while to work, and the dose will vary between people.",0,
+"You should not ask your GP to prescribe oral sedatives before you come into hospital unless your care team agrees, otherwise it may not be possible for your treatment to proceed.",2,uncertainty;directive_harshness
+It is important that you can think clearly when you meet with your doctor to discuss the benefits and risk of harm of your operation and procedure.,0,
+You will then need to sign a form to state that you agree to have the operation or procedure.,0,
+Intravenous sedation is when a sedative to relax you is injected into your bloodstream using a small plastic tube usually placed in a vein in your arm or hand.,0,
+Sedationists are trained to give the right amount of sedative and manage any side effects.,0,
+Your sedationist will stay with you during your treatment and monitor your breathing and oxygen levels.,0,
+"Many minor treatments and investigations can be undertaken with intravenous sedation, often together with a local anaesthetic.",0,
+"Examples include skin or breast biopsies, minor repair to fractured bones, minor surgery to the skin, endoscopy, bronchoscopy, colonoscopy, cystoscopy, removal of teeth, eye operations and cosmetic surgery.",0,
+Sedation treatment can also be provided in a dental surgery or a specialist dental clinic.,0,
+The standards for your safe care remain the same.,0,
+"Your sedationist, dentist or cosmetic surgeon will discuss the types of sedation suitable, explain what will happen during your treatment and any risks.",0,
+It is important that you follow carefully any advice and instructions that they give you.,0,
+Sedation works quickly and the dose can be adjusted so you get just the right amount.,0,
+It allows you to be relaxed during your treatment and you may not remember much about your treatment afterwards.,0,
+"For some procedures, it is possible to give sedation instead of a general anaesthetic, which may be helpful for patients with some medical problems.",1,uncertainty
+It usually has fewer side effects than a general anaesthetic.,0,
+"Recovery is quicker than after a general anaesthetic, so you can usually go home within an hour or two of your treatment if you feel well.",0,
+You should plan for someone else to look after any children or elderly relatives until the day after the procedure.,1,directive_harshness
+A capable adult will need to take you home by car or taxi ideally; using public transport is not advised after sedation.,0,
+"As the effects of sedation can last up to 24 hours, they should stay overnight to look after you.",1,directive_harshness
+"Take all your medicines to hospital with you, including any inhalers and any over-the-counter medicines you take regularly.",0,
+"If you have an illness or a cold or you are pregnant, please contact your hospital or clinic, as it may not be safe to have sedation and your treatment may have to be rearranged.",1,directive_harshness
+"If you are breastfeeding, let your doctor know on the day of the procedure.",0,
+"Remove all makeup including nail varnish and jewellery before coming to hospital or clinic, though you may wear a wedding ring.",0,
+"Bring some loose clothing, such as a dressing gown or fleece, to keep you comfortable and warm.",0,
+Wear flat shoes that are easy to put on.,0,
+"The clinic or hospital will give you exact instructions, including when to stop eating and drinking.",0,
+"For moderate and deep sedation, you should stop eating six hours before your treatment, but you may drink normal amounts of clear fluids up to two hours before your treatment.",1,directive_harshness
+Try not to stop eating or drinking for any longer than this.,0,
+"For minimal sedation, fasting is often not required, but it is important to check exact instructions with your hospital.",1,vivid_side_effects
+"If you have diabetes, you should ask for specific instructions about when you should take your diabetic medication and stop eating food.",1,directive_harshness
+On the day of your treatment you will usually change into a gown.,0,
+"When you go to the procedure room, your sedationist will attach monitoring equipment to you.",0,
+"The equipment used usually includes a blood pressure cuff on your arm, stickers on your upper chest to record your heart rhythm, a clip on your finger to measure your oxygen levels, and a thin plastic tube that measures the amount of carbon dioxide that you breathe out.",0,
+You will need to plan for someone else to look after people you care for until the day after the procedure.,1,
+A capable adult must take you home by car or taxi—public transport is not advised after sedation—and stay overnight to look after you because effects can last up to 24 hours.,2,
+"If you have an illness, cold or are pregnant, contact your hospital or clinic as it may not be safe to have sedation and your treatment may need to be rearranged.",2,
+"For moderate and deep sedation, you should stop eating six hours before your treatment and only drink clear fluids up to two hours before.",1,
+Try not to stop eating or drinking for any longer than the prescribed time.,0,
+"If you have diabetes, ask for specific instructions about when you should take your diabetic medication and stop eating food.",1,
+Sedation may make you unsteady on your feet; be careful on stairs and have someone with you if you feel unsteady.,1,
+"Your ability to make decisions and judgements may be affected for up to 24 hours after your treatment, so you should not make any important decisions during that time and should avoid posting on social media.",2,
+"You should not return to work, look after dependants, drive, cook or operate any machinery for 24 hours as it may take this time for the drugs to leave your body.",2,
+You should not take any alcohol or sleeping tablets for 24 hours after the procedure.,1,
+"If you are concerned or feel unwell after the procedure and cannot find the hospital contact number, call your GP, ring 111 or go to your local accident and emergency department.",1,
+"Risk cannot be removed completely, but modern drugs, equipment and training have made sedation much safer in recent years.",1,
+"Your breathing rate may become slow, especially in deep sedation, but your sedationist will monitor and support your breathing if required.",1,
+It is very common for your blood pressure to drop by a small amount.,1,
+There is a rare risk of stomach contents going into your lungs; follow the instructions for eating and drinking to keep this risk very low.,3,
+Any allergic reaction to the sedation drugs is very rare.,2,
+It is very common to feel drowsy and less steady on your feet after sedation.,1,
+It is common for sedation to affect your judgement and memory for up to 24 hours.,2,
+It is essential that you are accompanied to and from the hospital by an adult who must stay with you for 24 hours.,2,
+Do not drink alcohol for 24 hours before your surgery.,1,
+You must not travel home on public transport and must not drive yourself home.,2,
+Have a light meal and then nothing to eat for six hours before your treatment; you may drink clear fluids but do not drink fizzy or milky drinks.,1,
+"Smoking delays healing and increases the risk of infection, so please avoid smoking before and after surgery.",2,
+"Following intravenous sedation and local anaesthetic, avoid driving, using any power tool or machinery, drinking alcohol, undue exertion, or making any vital decisions for at least 24 hours and preferably 48 hours.",3,
+Take a painkiller before the numbness of the local anaesthetic wears off as you may experience discomfort then.,1,
+The sedation medicine or anaesthetic can make some patients slightly confused and unsteady; it can affect their judgement for up to 24 hours.,2,
+"Patients should not drive for 24 hours after a general anaesthetic or sedation, so take them home by car or taxi—public transport is not recommended.",2,
+"Patients should get plenty of rest, not walk unaided if they are unsteady, and carefully follow instructions from the hospital about taking their medication.",1,
+"For up to 24 hours they should not be responsible for children or other people in their care, not drive or ride a bike, not cook or operate machinery, not drink alcohol, not make important decisions or sign legal documents, avoid posting on social media and not do online shopping.",3,
+"If you cannot find the hospital contact number, call their GP, ring 111 or take them to your local accident and emergency department.",1,
+There are strict rules because the sedation can remain in the body for up to 24 hours; you must follow the specific instructions your surgeon gives you.,1,
+If a responsible adult escort is required they must stay in the clinic waiting room during your treatment and drive you home afterwards; otherwise you cannot have sedation.,2,
+"On the day of your treatment under oral, intravenous or intranasal sedation you can have a light meal up to 2 hours before and can drink fluids up to the time of treatment, but do not drink alcohol the day before or on the day.",1,
+"A responsible adult must bring you, drive you home and stay with you for the rest of the day; you cannot bring small children with you to your appointment.",2,
+After your treatment you must not travel home by public transport such as a bus; you should stay at home resting quietly for 24 hours.,2,
+"Do not drive a car or ride a bicycle, drink alcohol, operate machinery, or use a kettle or stove, or do any work or make important decisions for 24 hours as your balance, coordination and ability to think clearly will be affected.",3,
+You can eat and drink normally once the numbness in your mouth has worn off.,0,
+"If you have any pain, do not hesitate to take the painkillers recommended.",0,
+"You must bring an escort who is able to stay in the building during your appointment, take you home and look after you for the remainder of the day or potentially stay overnight.",2,
+"Your escort should be 18 years or older and cannot be responsible for children, elderly or dependents for the remainder of the day; they should take you home by car or taxi and you will not be permitted to drive for 24 hours.",2,
+You must not consume any alcohol or recreational drugs in the 24 hours prior to your appointment; drugs and alcohol interact with the sedative and can put you in danger.,2,
+There is no need to fast unless specifically told; otherwise have a light meal at least 2 hours before and avoid large meals or alcoholic beverages.,0,
+Ensure you have had fluids to drink because dehydration makes it more difficult to find a vein.,0,
+"If you are pregnant, trying to conceive or breastfeeding you must inform your dentist in advance.",1,
+"You must wear flat, comfortable shoes as you may be unsteady on your feet afterwards.",0,
+You must not wear any nail polish or false nails on your fingernails.,0,
+If there is any change to your medical history you must inform your dentist before sedation is started.,1,
+"You will not be discharged until you are orientated in time, place and person, your vital signs are normal, pain or discomfort has been addressed and the cannula removed, and the responsible escort is present.",1,
+"After sedation, you should go straight home, rest and not return to work.",2,
+You should not drive any type of vehicle or ride a bike.,2,
+You must not be in charge of any children or dependent relatives.,2,
+"You must not consume any alcohol, sleeping tablets or recreational drugs for 24 hours.",2,
+You should not take any painkiller stronger than paracetamol or ibuprofen unless advised by your dentist.,1,
+You must not operate any heavy machinery including kitchen equipment.,2,
+You must not climb any heights such as ladders or scaffolding.,1,
+You must not make any important decisions such as signing legal documents.,2,
+You may wish to avoid using social media or going on the internet because your memory and judgement may be compromised.,1,
+"If you have any concerns after leaving, contact the dental surgery or NHS 24.",1,
+Patients may be disorientated or confused for a short time after treatment; it is important that someone will be responsible for them and take care of them.,1,
+Patients should not go home until the dentist is satisfied they are in the care of a responsible adult.,2,
+The patient's judgement is likely to be affected; patients should not make any irreversible decisions for up to 24 hours following their treatment.,3,
+Patients should rest once they are home; care should be taken when cooking or using domestic appliances.,1,
+"Patients should not drive a vehicle, ride a bicycle, operate machinery or drink alcohol until the following day and sometimes for up to 24 hours.",2,
+"Owing to the after effects, care should be taken when using the internet for personal communication.",1,
+Patients may forget information soon after sedation; escorts may need to repeat instructions more than once.,0,
+You have been given a sedative medication to assist with your procedure.,0,
+You may experience a short period of memory loss during the time the sedation is effective.,1,
+Sedation may impair your judgment for up to 24 hours.,2,
+Most patients have feelings of tiredness afterwards.,1,
+Some people may believe they are fine and unaffected by the medication but their reactions will be slower.,2,
+You must have someone to take you home.,2,directive_harshness
+You should have someone at home with you for the next 12 hours.,2,directive_harshness
+You may feel sick after sedation so avoid eating large meals for 24 hours.,1,
+We advise you to rest.,0,
+Do not drive or ride a bicycle for 24 hours.,2,directive_harshness
+Do not drink alcohol for 24 hours.,1,directive_harshness
+Do not operate machinery or appliances such as kettles or cookers for 24 hours.,2,directive_harshness
+Do not sign any legally binding documents.,2,directive_harshness
+Do not care for any dependent adults or children without responsible help.,2,directive_harshness
+"If you have concerns within 24 hours of receiving sedation, contact the Emergency Department.",0,
+Intravenous sedation is used to help people who are very anxious cope with dental treatment.,0,
+You will feel drowsy and relaxed and will also be able to understand and respond.,0,
+Time will appear to pass very quickly and most people remember very little of the treatment afterwards.,0,
+You must bring a responsible adult with you who must be present at the beginning of the appointment; children must not be brought to the appointment.,2,directive_harshness
+You should not starve yourself; a light meal is advisable together with small non-alcoholic drinks.,0,directive_harshness
+You must take your routine medicines at the usual time and bring inhalers.,0,directive_harshness
+You should wear flat shoes and comfortable clothing.,0,directive_harshness
+You must not drink any alcohol for 24 hours before your appointment.,1,directive_harshness
+"You must not wear false nails, nail varnish or foundation make-up.",0,directive_harshness
+"You must phone if there is a change in your health or you develop a cough, cold or chest problems.",0,directive_harshness
+You must travel home with your escort by car or taxi.,2,directive_harshness
+You must stay resting quietly at home for the rest of the day with a responsible adult present.,2,vivid_side_effects;directive_harshness
+You must not drive or go on to the road.,2,directive_harshness
+"You must not use any equipment that may harm you, such as kettles, cookers, knives or power tools.",2,directive_harshness
+You must not sign any legal or business documents until the following day.,2,directive_harshness
+You must not drink alcohol for 24 hours after sedation.,1,directive_harshness
+You must not eat or drink anything for two hours prior to your appointment; before this you should have a light meal.,1,directive_harshness
+No alcohol is to be consumed 24 hours prior to the appointment.,1,
+You must be accompanied by a responsible adult who must be present in the waiting area and remain throughout the appointment.,2,directive_harshness
+"The accompanying adult must remain in the building, escort you home and arrange for you to be looked after for the following 24 hours.",2,directive_harshness
+The accompanying adult must not be in charge of any people other than the patient.,2,directive_harshness
+If you are taking any medicines they should be taken at the usual times and brought with you.,0,directive_harshness
+Any illness occurring before the appointment should be reported immediately.,0,directive_harshness
+Ensure nail varnish and false nails are removed before the appointment.,0,
+Your escort should take you home after treatment by private car or taxi and not public transport.,2,directive_harshness
+"You must not drive any vehicle, operate machinery, use any domestic appliance or use the Internet for 24 hours following sedation.",2,directive_harshness
+"You must not drink alcohol, return to work, make any important decisions or sign any legal documents for 24 hours after sedation.",2,directive_harshness
+You are advised to leave any valuables with the person accompanying you or at home.,0,
+If you are given premedication you must take it one hour prior to appointment and do not drive.,2,directive_harshness
+You are advised to ask the sedation nurse or clinician any questions you may have about your treatment.,0,
+Do not drink alcohol or caffeinated beverages for 24 hours prior to your appointment.,1,directive_harshness
+Do not eat or drink anything 12 hours prior to your appointment.,1,directive_harshness
+Regular medications should be taken as advised by Dr. Hebert.,0,directive_harshness
+Wear loose fitting clothing.,0,
+Take the attached pre-appointment pill one hour prior to your appointment.,0,
+Have your driver bring you to our office; absolutely no driving yourself.,2,
+Your driver should wait to receive your prescriptions while your treatment is being completed.,0,directive_harshness
+"Do not take any narcotics, barbiturates, antidepressants or muscle relaxers for 24 hours.",1,directive_harshness
+Do not drive for 18 hours after sedation.,2,directive_harshness
+Do not operate any hazardous device for 18 hours after sedation.,2,directive_harshness
+You should not be left unattended until you have fully recovered from the effects of sedation even if you are sleeping or appear to be alert.,2,directive_harshness
+Do not use stairs until you have fully recovered; walk with an escort.,2,directive_harshness
+Drink plenty of fluids as soon as possible; juice or other natural sugars are best.,0,uncertainty
+"Eat when you are ready; soft foods such as eggs, yogurt or soup.",0,
+Sedatives can cause some patients to feel a little disorientated or confused for some time after the treatment.,2,
+"It is important that someone will be responsible for them and take care of them for the remainder of the day; occasionally, it may be necessary to stay with them overnight.",2,
+The patient will not be allowed to go home until the dentist is satisfied that the patient is in the care of a responsible adult.,2,
+You must arrive with the patient and remain throughout the duration of the treatment.,2,directive_harshness
+The escort must take the patient home by car or taxi; not by public transport.,2,directive_harshness
+The patient’s judgement is likely to be affected and they should not make any irreversible decisions for up to 24 hours.,2,directive_harshness
+"If the escort normally looks after other dependents, they may need to make alternative arrangements.",2,
+Patients should be encouraged to rest once they are home.,0,directive_harshness
+"For up to 24 hours after sedation, the patient must not drive a car, ride a bicycle, drive an electric wheelchair or operate equipment including kitchen and domestic appliances.",2,directive_harshness
+They must not return to school or work.,2,directive_harshness
+"They must not take exercise, participate in sports or climb heights.",2,directive_harshness
+They must not drink alcohol.,1,directive_harshness
+They must not be the sole carer for children or dependents.,2,directive_harshness
+"They must not make important or irreversible decisions, make purchases or use the internet.",2,directive_harshness
+You must come to the Clinic with the person you are escorting and stay in the Clinic while they are having their treatment.,2,directive_harshness
+Suitable transport should be arranged for you and the patient after the appointment; this can either be by car or taxi; neither public transport nor walking is suitable.,2,directive_harshness
+The effects of sedation will last for approximately 24 hours and during this time the patient must not be left alone without an adult to supervise them.,2,directive_harshness
+"If you plan to leave the patient with another adult, you must pass on these instructions.",0,directive_harshness
+The patient must rest quietly at home for 24 hours.,2,directive_harshness
+The patient must take their prescribed medications as normal.,0,directive_harshness
+The patient must follow all instructions relating to their dental treatment.,0,directive_harshness
+The patient must not drive any vehicle.,2,directive_harshness
+The patient must not look after children or dependents.,2,directive_harshness
+The patient must not make any important decisions or sign legal documents.,2,directive_harshness
+The patient must not operate any household appliances.,2,directive_harshness
+The patient must not operate any machinery.,2,directive_harshness
+The patient must not drink alcohol or take recreational drugs.,2,directive_harshness
+"If the patient is a breastfeeding mother, she must not breastfeed for 24 hours and should dispose of any milk expressed.",2,directive_harshness
+Ensure that you have a responsible adult at home to look after you for the 24 hours following your sedation.,2,
+Come to the hospital without make-up or nail polish as this may affect the accuracy of monitors used during the procedure and put you at risk.,1,
+Pre-assessment will provide instructions on whether you are able to eat and drink before your procedure.,0,
+"If you are ill and may not have recovered by the date of your surgery, please contact the department as the procedure may need to be postponed.",0,directive_harshness
+You will need to be observed in the hospital until you recover enough from sedation.,0,directive_harshness
+You will need to have a responsible adult at home for 24 hours following sedation to ensure that medical attention can be sought if you experience problems.,2,directive_harshness
+Slowing of your breathing is a risk of sedation; this will be monitored and can be supported if needed.,2,
+Your blood pressure may drop; this can be managed by altering the medication you are receiving or by providing medication to support your blood pressure.,2,
+You may have a bruise at the site of the cannula.,1,
+There is a small risk of feeling sick or vomiting.,1,vivid_side_effects
+There is a rare risk of stomach contents going into your lungs.,3,
+Have a light meal about 2 hours before your appointment.,0,
+"Wear comfortable clothing with loose sleeves allowing easy access to the elbow region, and flat-heeled shoes.",0,
+"Do not wear nail varnish, jewellery, make up or contact lenses.",0,directive_harshness
+You must bring a responsible adult with you to escort you home and stay with you for at least 6 hours after sedation; sedation will not be given if you arrive without an escort or with children.,2,directive_harshness
+Do not drink alcohol for 24 hours before the appointment or eat heavy meals or fatty foods on the day of your appointment.,1,directive_harshness
+"Take your routine medication, unless otherwise instructed by the dentist, and bring any inhalers.",0,
+Please phone before your appointment if you develop a cold or chest problem or if there is a change in your general health.,0,directive_harshness
+Your escort will need to sign a document as part of the process of accepting responsibility for your aftercare.,0,
+You must be taken home by car and looked after by a responsible adult for at least 6 hours.,2,directive_harshness
+You will feel relaxed and possibly sleepy for the rest of the day.,0,
+Be careful not to bite or burn your tongue or lips while you are numb.,0,vivid_side_effects
+For 24 hours after sedation do not work or drive.,2,directive_harshness
+For 24 hours after sedation do not use machinery.,2,directive_harshness
+For 24 hours after sedation do not sign cheques or documents or make important decisions.,2,directive_harshness
+For 24 hours after sedation do not breastfeed if you are a nursing mother.,2,directive_harshness
+For 24 hours after sedation do not supervise young children alone.,2,directive_harshness
+"We do not anticipate that you will have any problems but should you become concerned about anything, contact your sedationist or NHS Helpline 111 for advice.",0,directive_harshness

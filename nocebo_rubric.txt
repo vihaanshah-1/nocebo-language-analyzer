@@ -1,0 +1,14 @@
+
+Category descriptions:
+
+1. threat_intensity: Sentences containing words suggesting high severity or fatal outcomes (e.g., 'death', 'stroke', 'anaphylaxis', 'serious complications').
+2. uncertainty: Phrases implying unpredictability or unknown outcomes (e.g., 'possible', 'rarely', 'may').
+3. vivid_side_effects: Terms describing unpleasant side effects in vivid detail (e.g., 'nausea', 'vomiting', 'pain', 'itchy rash').
+4. directive_harshness: Imperative or restrictive language instructing patients to comply or avoid certain actions (e.g., 'must not', 'do not', 'stop taking').
+
+Label assignment:
+0 = neutral
+1 = mild anxiety trigger (one category)
+2 = moderate (two categories)
+3 = high (three or more categories)
+

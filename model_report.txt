@@ -1,0 +1,18 @@
+
+Classification report:
+              precision    recall  f1-score   support
+
+     Neutral       0.68      0.68      0.68        22
+        Mild       0.47      0.44      0.45        16
+    Moderate       0.65      0.72      0.68        18
+        High       0.00      0.00      0.00         1
+
+    accuracy                           0.61        57
+   macro avg       0.45      0.46      0.45        57
+weighted avg       0.60      0.61      0.61        57
+
+Confusion matrix:
+[[15  5  2  0]
+ [ 5  7  4  0]
+ [ 2  3 13  0]
+ [ 0  0  1  0]]
